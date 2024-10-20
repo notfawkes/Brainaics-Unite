@@ -9,64 +9,32 @@
 <body>
     <div class="container">
         <h1>What Is The Domain Of Your Complaint?</h1>
-        <form>
-            <div class="option">
-                <input type="radio" id="family" name="complaintDomain" value="Family">
+        <form id="myForm">
+            <!-- <div class="option"> -->
+                <div >
+                <input type="radio" id="family" name="options" value="Page4Family.html">
                 <label for="family">1 - Family</label>
             </div>
-            <div class="option">
-                <input type="radio" id="education" name="complaintDomain" value="Education">
+            <div >
+                <input type="radio" id="education" name="options" value="Page4Education.html">
                 <label for="education">2 - Education</label>
             </div>
-            <div class="option">
-                <input type="radio" id="employment" name="complaintDomain" value="Employment">
-                <label for="employment">3 - Employment</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="bankruptcy" name="complaintDomain" value="Bankruptcy">
-                <label for="bankruptcy">4 - Bankruptcy</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="corporate" name="complaintDomain" value="Corporate">
-                <label for="corporate">5 - Corporate</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="criminal" name="complaintDomain" value="Criminal">
-                <label for="criminal">6 - Criminal</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="divorce" name="complaintDomain" value="Divorce">
-                <label for="divorce">7 - Divorce</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="estatePlanning" name="complaintDomain" value="Estate Planning">
-                <label for="estatePlanning">8 - Estate Planning</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="government" name="complaintDomain" value="Government">
-                <label for="government">9 - Government</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="intellectualProperty" name="complaintDomain" value="Intellectual Property">
-                <label for="intellectualProperty">10 - Intellectual Property</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="litigation" name="complaintDomain" value="Litigation">
-                <label for="litigation">11 - Litigation</label>
-            </div>
-            <div class="option">
+            <div >
                 <input type="radio" id="tax" name="complaintDomain" value="Tax">
-                <label for="tax">12 - Tax</label>
-            </div>
-            <div class="option">
-                <input type="radio" id="others" name="complaintDomain" value="Others">
-                <label for="others">13 - Others</label>
-            </div>
+                <label for="tax">3 - Tax</label>
+
             <div class="ai-usage">
                 <p>We use AI to enhance your experience and provide better assistance.</p>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" value="Submit"> Next</button>
         </form>
+        <script>
+            document.getElementById("myForm").onsubmit = function(event) {
+                event.preventDefault(); // Prevent form submission
+                var selectedOption = document.querySelector('input[name="options"]:checked').value;
+                window.open(selectedOption, '_blank'); // Open the selected page in a new tab
+            };
+        </script>
     </div>
-</body>
+        </body>
 </html>

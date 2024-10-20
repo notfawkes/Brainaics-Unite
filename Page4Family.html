@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Problems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: url('Backgroundimg1.png.jpg') center/cover no-repeat;
+        }
+
+        .centered-div {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        /* Style for the dialog box */
+        #dialog-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background-color: white;
+            border: 2px solid #0077b6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        /* Overlay background when dialog is active */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #023e8a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="centered-div">
+        <h1>Specify your problem related to Family</h1>
+        <form>
+            <label>
+                <input type="radio" name="family-law" value="divorce-separation" onclick="showDialog('Legal solutions for divorce and separation include establishing clear laws for equitable distribution of assets, spousal support, and child custody arrangements to protect the rights of all parties involved. Providing mediation services can help couples reach amicable agreements, while ensuring access to legal aid can assist those who may not afford representation.')">
+                Divorce and Separation
+            </label>
+
+            <label>
+                <input type="radio" name="family-law" value="child-custody" onclick="showDialog('Legal solutions for child custody and visitation include establishing guidelines that prioritize the best interests of the child, ensuring fair assessments of parental capabilities. Courts can facilitate mediation to promote cooperative co-parenting arrangements, while enforcing clear visitation rights helps protect both parents relationships with their children.')">
+                Child Custody and Visitation
+            </label>
+
+            <label>
+                <input type="radio" name="family-law" value="child-support" onclick="showDialog('Legal solutions for child support include establishing clear guidelines for calculating support amounts based on income and needs, ensuring fair and consistent financial support for children. Courts can enforce compliance through legal mechanisms, while providing resources for parents to modify support agreements as circumstances change can help maintain financial stability for families.')">
+                Child Support
+            </label>
+
+            <label>
+                <input type="radio" name="family-law" value="alimony-support" onclick="showDialog('Legal solutions for alimony or spousal support involve establishing clear criteria for determining eligibility and amount, considering factors like income, duration of marriage, and standard of living. Courts can facilitate agreements through mediation and enforce support orders to ensure compliance, providing financial stability for the lower-earning or non-working spouse post-divorce.')">
+                Alimony/Spousal Support
+            </label>
+        </form>
+    </div>
+
+    <!-- The Dialog Box -->
+    <div id="overlay"></div>
+    <div id="dialog-box">
+        <p id="dialog-text">This is a dialog box.</p>
+        <button class="close-btn" onclick="closeDialog()">Close</button>
+    </div>
+
+    <script>
+        // Function to show the dialog box
+        function showDialog(message) {
+            // Set the custom message in the dialog box
+            document.getElementById('dialog-text').innerText = message;
+            
+            // Show the dialog box and the overlay
+            document.getElementById('dialog-box').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Function to close the dialog box
+        function closeDialog() {
+            document.getElementById('dialog-box').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

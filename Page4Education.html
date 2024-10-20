@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralized Radio Buttons</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: url('Backgroundimg1.png.jpg') center/cover no-repeat;
+        }
+
+        .centralized-div {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background-color: white;
+        }
+
+        .radio-option {
+            margin-bottom: 15px;
+            display: block;
+            background-color: white;
+        }
+
+        label {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+
+        /* Dialog box styles */
+        #dialog-box {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            background-color: white;
+            border: 2px solid #0077b6;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        /* Overlay background */
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 500;
+        }
+
+        /* Close button styles */
+        .close-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #023e8a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="centralized-div">
+        <h1>Specify your problem related to Education</h1>
+        <form>
+            <div class="radio-option">
+                <input type="radio" id="education" name="category" value="Access to Education" onclick="showDialog('Legal solutions to access to education include enacting laws for free and compulsory education, enforcing anti-discrimination policies, and ensuring equitable funding. Advocacy through litigation and community rights also play crucial roles in improving educational access for marginalized groups.')">
+                <label for="education">Access to Education</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="specialEducation" name="category" value="Special Education" onclick="showDialog('Legal solutions for special education involve enforcing laws like the Individuals with Disabilities Education Act (IDEA), which ensures students with disabilities receive free appropriate public education tailored to their needs. Additionally, anti-discrimination laws can promote inclusion and accessibility in educational settings.')">
+                <label for="specialEducation">Special Education</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="discipline" name="category" value="School Discipline and Student Rights" onclick="showDialog('Legal solutions for school discipline and students rights include enforcing policies that ensure fair and transparent disciplinary procedures, as mandated by laws like the Individuals with Disabilities Education Act (IDEA) and the Every Student Succeeds Act (ESSA). Additionally, schools must adhere to anti-discrimination laws to protect students from unjust treatment based on race, gender, or disability.')">
+                <label for="discipline">School Discipline and Student Rights</label>
+            </div>
+
+            <div class="radio-option">
+                <input type="radio" id="bullying" name="category" value="Bullying and Harassment" onclick="showDialog('Legal solutions for bullying and harassment in schools include implementing anti-bullying laws that require schools to create policies and protocols for reporting and addressing incidents. Additionally, schools must comply with federal laws, such as Title IX and the Civil Rights Act, to protect students from discrimination and harassment based on gender, race, or disability.')">
+                <label for="bullying">Bullying and Harassment</label>
+            </div>
+        </form>
+    </div>
+
+    <!-- The Dialog Box -->
+    <div id="overlay"></div>
+    <div id="dialog-box">
+        <p id="dialog-text">This is a dialog box.</p>
+        <button class="close-btn" onclick="closeDialog()">Close</button>
+    </div>
+
+    <script>
+        // Function to show the dialog box with specific message
+        function showDialog(message) {
+            // Set the custom message in the dialog box
+            document.getElementById('dialog-text').innerText = message;
+            
+            // Show the dialog box and the overlay
+            document.getElementById('dialog-box').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Function to close the dialog box
+        function closeDialog() {
+            document.getElementById('dialog-box').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

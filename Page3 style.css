@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: url('Backgroundimg1.png.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
