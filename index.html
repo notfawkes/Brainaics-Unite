@@ -3,63 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegalDoc - AI-Powered Legal Document Management System</title>
+    <title>LegalDoc - AI-Powered Legal Document Management</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <h1>LegalDoc</h1>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- Marquee for Announcements -->
+    <section class="marquee">
+        <div class="marquee-content">
+            <p>🔥 New feature update: Real-time compliance monitoring! | 50% off for first-time users! | Free trial available! 🚀</p>
+        </div>
+    </section>
+
     <main>
-        <section class="hero">
+        <section class="hero" id="home">
             <div class="hero-content">
                 <h2>Streamline Your Legal Document Management with AI</h2>
                 <p>Automate the creation, storage, and review of legal documents, saving time and reducing errors.</p>
-                <button class="cta-button">Get Started</button>
+                <button class="cta-button"><a href="Page2.html">Get Started</button>
             </div>
         </section>
-        <section class="features">
+
+        <section class="features" id="features">
             <h2>Key Features</h2>
             <div class="feature-grid">
-                <div class="feature-item">
+                <div class="feature-item pop-out">
+                    <i class="fas fa-search fa-3x"></i>
                     <h3>AI-Powered Document Search</h3>
                     <p>Quickly find relevant documents and clauses using natural language processing.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item pop-out">
+                    <i class="fas fa-file-contract fa-3x"></i>
                     <h3>Automated Contract Generation</h3>
                     <p>Generate contracts from templates with AI suggestions tailored to your needs.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item pop-out">
+                    <i class="fas fa-lock fa-3x"></i>
                     <h3>Secure Collaboration</h3>
                     <p>Work together with your team securely with real-time updates and sharing.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item pop-out">
+                    <i class="fas fa-code-branch fa-3x"></i>
                     <h3>Version Control</h3>
                     <p>Keep track of document changes and revisions seamlessly.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item pop-out">
+                    <i class="fas fa-shield-alt fa-3x"></i>
                     <h3>Compliance Monitoring</h3>
                     <p>Ensure compliance with GDPR, HIPAA, and other regulations effortlessly.</p>
                 </div>
-                <div class="feature-item">
+                <div class="feature-item pop-out">
+                    <i class="fas fa-pen-alt fa-3x"></i>
                     <h3>E-Signature Integration</h3>
                     <p>Sign documents digitally for a faster and more efficient workflow.</p>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 LegalDoc. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

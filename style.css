@@ -46,8 +46,32 @@ nav ul li a:hover {
     color: #e0e0e0;
 }
 
+/* Marquee Section */
+.marquee {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hero Section */
 .hero {
-    background: url('Backgroundimg.png') center/cover no-repeat; /* Placeholder image */
+    background: url('Backgroundimg.png') center/cover no-repeat;
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -77,13 +101,15 @@ nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
     background-color: #218838;
+    transform: scale(1.05);
 }
 
+/* Features Section */
 .features {
     text-align: center;
     padding: 50px 20px;
@@ -108,8 +134,17 @@ nav ul li a:hover {
     transition: transform 0.3s;
 }
 
-.feature-item:hover {
-    transform: translateY(-5px);
+.pop-out {
+    transition: transform 0.3s;
+}
+
+.pop-out:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.feature-item i {
+    margin-bottom: 15px;
+    color: #007bff;
 }
 
 .feature-item h3 {

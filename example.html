@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Form</title>
+</head>
+<body>
+    <form id="myForm">
+        <p>Select an option:</p>
+        <input type="radio" id="option1" name="options" value="Page2.html">
+        <label for="option1">Option 1</label><br>
+        <input type="radio" id="option2" name="options" value="Page3.html">
+        <label for="option2">Option 2</label><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById("myForm").onsubmit = function(event) {
+            event.preventDefault(); // Prevent form submission
+            var selectedOption = document.querySelector('input[name="options"]:checked').value;
+            window.open(selectedOption, '_blank'); // Open the selected page in a new tab
+        };
+    </script>
+</body>
+</html>
